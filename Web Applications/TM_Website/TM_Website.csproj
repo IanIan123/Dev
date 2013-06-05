@@ -268,6 +268,7 @@
     <Content Include="Javascript\bootstrap\glyphicons-halflings.png" />
     <Content Include="Javascript\gAnalytics\ga.js" />
     <Content Include="Javascript\gAnalytics\TrackingCode.js" />
+    <Content Include="Javascript\TBot\User_Password.js" />
     <Content Include="Javascript\TM\cleditor.js" />
     <Content Include="Javascript\TM\GuidanceItemPreview.js" />
     <Content Include="Javascript\TM\GuidanceItemEditor.js" />
@@ -678,6 +679,7 @@
     <Content Include="TBot\VirtualArticles\Article_Links.cshtml" />
     <Content Include="TBot\Admin\Config\Edit_TMConfig.cshtml" />
     <Content Include="TBot\Admin\Config\TMServer_Config.cshtml" />
+    <Content Include="TBot\Views\User_Password.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

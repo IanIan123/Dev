@@ -10,6 +10,8 @@ namespace TeamMentor.CoreLib
     public class ValidationRegex
     {        
         public const string Email = @"^[\w-\.]{1,}\@([\w]{1,}\.){1,}[a-z]{2,4}$";
+        public const string Password = @"(?=.*\d)(?=.*[a-zA-Z]).{8,}";
+        public const string PasswordErrorMessage = "Password must contain a letter and a number.";
     }
 
     [DataContract]

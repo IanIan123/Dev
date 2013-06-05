@@ -40,8 +40,13 @@ namespace TeamMentor.CoreLib
 	    {
 	        return TmWebServices.UpdateUser(user.UserId, user.UserName, user.FirstName, 
                                             user.LastName, user.Title, user.Company, user.Email,
-                                            user.Country, user.State, user.ExpirationDate, user.PasswordExpired, user.UserEnabled, -1);
+                                            user.Country, user.State, user.ExpirationDate, user.PasswordExpired, user.UserEnabled, user.GroupID);
 	    }
+        [Admin]
+        public bool change_password(string userId, string newPassword)
+        {
+            return TmWebServices.SetUserPassword(userId.toInt(), newPassword);
+        } 
 	    [Admin] public TM_User			user(string userNameOrId)
 		{
 		    var user = TmWebServices.GetUser_byID(userNameOrId.toInt());

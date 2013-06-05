@@ -124,10 +124,25 @@ namespace TeamMentor.UnitTests.TM_XmlDatabase
             Assert.IsFalse    (tmUser.password_Expired(), "Password expiry should not be set after password change");
             Assert.AreNotEqual(Guid.Empty               , userData.login(tmUser.UserName, newPassword));
         }        
-        [Test, Ignore("under dev")]
-        public void PasswordComplexity()
+        [TestCase("1234567890*(")]
+        [TestCase("abcdefghijklmn!£")]
+        public void New_Password_Cannot_Be_Simple(string newPassword)
         {
-            
+            var tmUser = userData.newUser().tmUser();
+
+            bool successful = tmUser.setPassword(newPassword);
+
+            Assert.IsFalse(successful);
         }
+        [TestCase("1234567a")]
+        [TestCase("!!tmadmin0")]
+        public void New_Password_Can_Be_Complex(string newPassword)
+         {
+            var tmUser = userData.newUser().tmUser();
+
+            bool successful = tmUser.setPassword(newPassword);
+
+            Assert.IsTrue(successful);
+         }
     }
 }

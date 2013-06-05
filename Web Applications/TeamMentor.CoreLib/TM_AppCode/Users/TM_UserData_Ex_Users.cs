@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Security.Application;
 using O2.DotNetWrappers.ExtensionMethods;
+using TeamMentor.CoreLib.TM_AppCode.Schemas;
 
 namespace TeamMentor.CoreLib
 {
@@ -269,8 +270,8 @@ namespace TeamMentor.CoreLib
             return TM_UserData.Current.TMUsers.toList();
         }                
         public static bool          setPassword         (this TMUser tmUser, string password)
-        {		            
-            if (tmUser.notNull())
+        {
+            if (tmUser.notNull() && new Password(password).validation_Ok())
             {                
                 tmUser.SecretData.PasswordHash       = tmUser.createPasswordHash(password);
                 tmUser.AccountStatus.PasswordExpired = false;
