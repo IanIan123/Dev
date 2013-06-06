@@ -13,30 +13,10 @@
             });
         };
 
-    AddPasswordCompareValidation();
-
     var userName = window.location.search.substring(1);
     if (userName != "") {
         $http.get('/rest/user/' + userName).success(function (data) {
             $scope.userData = data;
         });
     }
-}
-
- function AddPasswordCompareValidation() {
-
-    var confirmPassword = angular.element(document.getElementById("confirmPassword"));
-    
-       confirmPassword.bind("input", function () {
-
-        var errorMessage;
-
-        if (confirmPassword.val() != angular.element(document.getElementById("newPassword")).val()) {
-            errorMessage = "Please make sure this is the same as your new password.";
-        } else {
-            errorMessage = "";
-        }
-
-      confirmPassword[0].setCustomValidity(errorMessage);
-    });
 }
