@@ -1,7 +1,8 @@
 ﻿<script src="/Javascript/jQuery/jquery-1.8.1.min.js" type="text/javascript"></script>  
 <script type="text/javascript" src="/Javascript/bootstrap/2.2.2/bootstrap.min.js"></script>
 <link   href="/Javascript/bootstrap/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />        
-<script src="/Javascript/bootstrap/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script> 
+<script src="/Javascript/bootstrap/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/TBot/Views/User_Menu.js" type="text/javascript"></script>
 <script type="text/javascript">
     
 function TMUser($scope,$http)
@@ -46,11 +47,7 @@ function TMUser($scope,$http)
 
 <div ng-controller="TMUser">
     	
-    <a href="User_View?userName={{userData.UserName}}" class="btn btn-info" >View User</a>
-    <a href="User_Edit?{{userData.UserName}}" class="btn btn-info" disabled>Edit User</a>
-    <a href="User_Password?{{userData.UserName}}" class="btn btn-info">Change Password</a>
-    <a href="User_Activities?userName={{userData.UserName}}" class="btn btn-info" >View Activity/Logs</a>
-    <a href="User_Raw?userName={{userData.UserName}}" class="btn btn-info">Raw/Xml Data</a>
+    <user-menu></user-menu>
 
     <h4>Editing user </h4>
     
