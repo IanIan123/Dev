@@ -126,7 +126,7 @@ namespace TeamMentor.UnitTests.TM_XmlDatabase
         }        
         [TestCase("1234567890*(")]
         [TestCase("abcdefghijklmn!£")]
-        public void New_Password_Cannot_Be_Simple(string newPassword)
+        public void New_Password_Cannot_Be_Password_That_Doesnt_Satisfy_Password_Complexity_Regex(string newPassword)
         {
             var tmUser = userData.newUser().tmUser();
 
@@ -136,7 +136,7 @@ namespace TeamMentor.UnitTests.TM_XmlDatabase
         }
         [TestCase("1234567a")]
         [TestCase("!!tmadmin0")]
-        public void New_Password_Can_Be_Complex(string newPassword)
+        public void New_Password_Can_Be_Password_That_Satisfies_Password_Complexity_Regex(string newPassword)
          {
             var tmUser = userData.newUser().tmUser();
 
