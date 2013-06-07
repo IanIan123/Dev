@@ -69,8 +69,9 @@ namespace TeamMentor.CoreLib
 		}		
         [Admin] public bool             user_Update(TM_User user)
 		{
-			var groupId = -1; //not implemented for now
-			return TmWebServices.UpdateUser(user.UserId, user.UserName, user.FirstName, user.LastName, user.Title, user.Company,user.Email, user.Country , user.State, user.ExpirationDate, user.PasswordExpired, user.UserEnabled ,groupId);
+            user.GroupID = -1;
+
+            return TmWebServices.UpdateUser(user);
 		}
 	}
 }
