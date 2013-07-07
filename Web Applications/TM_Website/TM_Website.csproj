@@ -284,6 +284,7 @@
     <Content Include="Javascript\bootstrap\glyphicons-halflings.png" />
     <Content Include="Javascript\gAnalytics\ga.js" />
     <Content Include="Javascript\gAnalytics\TrackingCode.js" />
+    <None Include="TBot\Views\User.cshtml" />
     <Content Include="TBot\Views\User_Menu.htm" />
     <Content Include="TBot\Views\User_Menu.js" />
     <Content Include="TBot\Views\User_Password.js" />
