@@ -1,19 +1,11 @@
-﻿
-@using O2.DotNetWrappers.ExtensionMethods
+﻿@using O2.DotNetWrappers.ExtensionMethods
 @using TeamMentor.CoreLib
-@using FluentSharp
 
 @{
     var userData = TM_UserData.Current;
-    var userName   = System.Web.HttpContext.Current.Request["userName"];    
+    var userName = System.Web.HttpContext.Current.Request["userName"];    
     var tmUser = userData.tmUser(userName);
 }
-
-<a href="User_View?userName=@tmUser.UserName" class="btn btn-info">View User</a>
-<a href="User_Edit?@tmUser.UserName" class="btn btn-info" >Edit User</a>
-<a href="User_Password?@tmUser.UserName" class="btn btn-info">Change Password</a>
-<a href="User_Activities?userName=@tmUser.UserName" class="btn btn-info" >View Activity/Logs</a>
-<a href="#" class="btn btn-info" disabled>Raw/Xml Data</a>
 
 <h4>User details</h4>
 
@@ -28,6 +20,3 @@ else
 {
     <p>No user found</p>
 }
-
-<hr/>
-<a href="Current_Users">back to users list</a>

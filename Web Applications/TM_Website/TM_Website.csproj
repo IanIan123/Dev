@@ -265,6 +265,7 @@
     <Content Include="Images\PivotHeader.jpg" />
     <Content Include="Images\RemoveAllButton.jpg" />
     <Content Include="Javascript\angularJS\1.0.5\angular.min.js" />
+    <Content Include="Javascript\angularJS\1.1.5\angular.min.js" />
     <Content Include="Javascript\angularJS\Directives\StringComparisonValidator.js" />
     <Content Include="Javascript\bootstrap\2.2.2\bootstrap.min.js" />
     <Content Include="Javascript\bootstrap\2.3.1\css\bootstrap-responsive.css" />
@@ -284,6 +285,9 @@
     <Content Include="Javascript\bootstrap\glyphicons-halflings.png" />
     <Content Include="Javascript\gAnalytics\ga.js" />
     <Content Include="Javascript\gAnalytics\TrackingCode.js" />
+    <None Include="TBot\Views\User.cshtml" />
+    <Content Include="TBot\Views\User.js" />
+    <Content Include="TBot\Views\User_Edit.js" />
     <Content Include="TBot\Views\User_Menu.htm" />
     <Content Include="TBot\Views\User_Menu.js" />
     <Content Include="TBot\Views\User_Password.js" />

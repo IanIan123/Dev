@@ -27,8 +27,8 @@
                 <td id="CreatedDate">@user.CreatedDate.fromFileTimeUtc().ToString("MMM/dd/yyyy")</td>
                 <td id="Actions">@user.Email</td>
                 <td>
-                    <a href="User_Edit?@user.UserName">edit user</a> | 
-                    <a href="User_Activities?userName=@user.UserName&max=50">view activity</a>
+                    <a href="User#/Edit/@user.UserName">edit user</a> | 
+                    <a href="User#/Activities/@user.UserName/50">view activity</a>
                 </td>
 
             </tr>

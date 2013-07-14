@@ -1,0 +1,29 @@
+﻿<script src="/Javascript/jQuery/jquery-1.8.1.min.js" type="text/javascript"></script>  
+<script type="text/javascript" src="/Javascript/bootstrap/2.2.2/bootstrap.min.js"></script>
+<link   href="/Javascript/bootstrap/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />        
+<script src="/Javascript/bootstrap/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/TBot/Views/User.js" type="text/javascript"></script>
+<script src="/TBot/Views/User_Menu.js" type="text/javascript"></script>
+<script src="/TBot/Views/User_Edit.js" type="text/javascript"></script>
+<script src="/TBot/Views/User_Password.js" type="text/javascript"></script>
+
+<user-menu></user-menu>
+
+<div ng-view></div>
+
+<style type="text/css">
+  .css-form input.ng-invalid.ng-dirty 
+  {
+    background-color: #FA787E;
+  }
+
+  .result {
+      font-weight: bold;
+      color: #005580;
+      margin-left: 10px;
+  }
+
+</style>
+
+<hr/>
+<a href="Current_Users">back to users list</a>
