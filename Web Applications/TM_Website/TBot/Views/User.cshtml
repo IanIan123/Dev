@@ -2,20 +2,10 @@
 <script type="text/javascript" src="/Javascript/bootstrap/2.2.2/bootstrap.min.js"></script>
 <link   href="/Javascript/bootstrap/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />        
 <script src="/Javascript/bootstrap/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/TBot/Views/User.js" type="text/javascript"></script>
 <script src="/TBot/Views/User_Menu.js" type="text/javascript"></script>
-<script type="text/javascript">
-
-    angular.module('ng').
-        config(function ($routeProvider) {
-            $routeProvider.
-                when('/User_View', { templateUrl: '/rest/tbot/run/User_View' }).
-                when('/Edit', { templateUrl: '/rest/tbot/run/User_Edit' }).
-                when('/User_Password', { templateUrl: '/rest/tbot/run/User_Password' }).
-                when('/User_Activities', { templateUrl: '/rest/tbot/run/User_Activities' }).
-                when('/User_Raw', { templateUrl: '/rest/tbot/run/User_Raw' });
-        });
-    
-</script>
+<script src="/TBot/Views/User_Edit.js" type="text/javascript"></script>
+<script src="/TBot/Views/User_Password.js" type="text/javascript"></script>
 
 <user-menu></user-menu>
 

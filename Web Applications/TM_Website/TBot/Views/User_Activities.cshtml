@@ -1,5 +1,4 @@
-﻿
-@using O2.DotNetWrappers.ExtensionMethods
+﻿@using O2.DotNetWrappers.ExtensionMethods
 @using TeamMentor.CoreLib
 @using FluentSharp
 
@@ -19,13 +18,6 @@
 
 @if (tmUser.notNull())
 {
-    
-    <a href="User_View?userName=@tmUser.UserName" class="btn btn-info" >View User</a>
-    <a href="User_Edit?@tmUser.UserName" class="btn btn-info" >Edit User</a>
-    <a href="User_Password?@tmUser.UserName" class="btn btn-info">Change Password</a>
-    <a href="User_Activities?userName=@tmUser.UserName" class="btn btn-info" disabled>View Activity/Logs</a>
-    <a href="User_Raw?userName=@tmUser.UserName" class="btn btn-info">Raw/Xml Data</a>
-
     <h5>User Activity (top @max of @tmUser.UserActivities.size())</h5>
 
     <ul>
@@ -62,6 +54,3 @@ else
 {
     <p>No user found</p>
 }
-
-<hr/>
-<a href="Current_Users">back to users list</a>

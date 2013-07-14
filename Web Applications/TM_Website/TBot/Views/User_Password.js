@@ -1,4 +1,4 @@
-﻿function TMUser($scope, $http) {
+﻿function TMUserPassword($scope, $http, $routeParams) {
     $scope.update = function (userData) {
         $scope.result = "... saving user";
         $http.put('/rest/user/changePassword', userData)
@@ -13,7 +13,7 @@
             });
         };
 
-    var userName = window.location.search.substring(1);
+    var userName = $routeParams.userName;
     if (userName != "") {
         $http.get('/rest/user/' + userName).success(function (data) {
             $scope.userData = data;
